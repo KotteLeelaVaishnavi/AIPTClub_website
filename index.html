@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPTClub - Artificial Intelligence Pioneers of Tomorrow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src="script.js"></script>
+   
+</head>
+<body>
+    <div class="ai-background">
+        <div class="ai-particles" id="particles"></div>
+        <div class="neural-network"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AIPTClub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="https://github.com/AIPTCLUBVIEW" target="_blank">Projects</a></li>
+                <li><a href="https://medium.com/@aipt2025" target="_blank">Tech Articles</a></li>
+                <li><a href="https://www.instagram.com/aipt_club_view/" target="_blank">Reels</a></li>
+            </ul>
+            <div class="sign-in-container">
+                <button class="sign-in-btn" onclick="toggleDropdown()">Sign In</button>
+                <div class="dropdown" id="signInDropdown">
+                    <a href="#" class="dropdown-item" onclick="showModal('studentModal')">Student Sign-In/Register</a>
+                    <a href="#" class="dropdown-item" onclick="showModal('adminModal')">Admin Sign-In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-logo">
+            <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752842248/logo_jdlax3.jpg" >
+        </div>
+        <h1 class="hero-title">AIPT Club</h1>
+        <p class="hero-subtitle">Artificial Intelligence Pioneers of Tomorrow</p>
+        <p class="hero-description">
+            AIPTClub is a dynamic student-led organization dedicated to fostering innovation and technical excellence in artificial intelligence and machine learning. We create a vibrant community where students explore cutting-edge AI technologies, participate in hackathons, attend expert lectures, and build projects that shape the future. Our mission is to bridge the gap between academic learning and industry requirements, preparing students to become the next generation of AI pioneers through hands-on workshops, technical competitions, and collaborative learning experiences.
+        </p>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>AIPTClub was founded in 2025 by a group of passionate computer science students who recognized the growing importance of artificial intelligence in shaping our future. What started as a small study group has evolved into a thriving community of over 500 members across various engineering disciplines.</p>
+                <br>
+                <p>Our mission is to democratize AI education and create opportunities for students to engage with industry professionals, work on real-world projects, and develop the skills needed to excel in the rapidly evolving field of artificial intelligence.</p>
+                <br>
+                <p>We organize technical workshops, guest lectures from industry experts, coding competitions, and collaborative projects that provide hands-on experience with machine learning frameworks, neural networks, and emerging AI technologies.</p>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number" id="memberCount">500+</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="eventCount">3+</div>
+                    <div class="stat-label">Events Conducted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="yearsActive">8</div>
+                    <div class="stat-label">Months Active</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="team" class="section">
+        <h2 class="section-title">Meet the Core Team</h2>
+        <div class="team-container">
+            
+           
+                
+            
+            <div class="team-members">
+<div class="member-card1">
+                            </div>
+                <div class="member-card" onclick="showMemberModal('Head of CSE Department', 'Coordinates all the club activities.')">
+                    <img src="https://res.cloudinary.com/dbjb3risi/image/upload/v1757606187/WhatsApp_Image_2025-07-23_at_9.31.33_AM_ixj5ri.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">Dr.P.Vijaya Bharathi</h3>
+                    <p class="member-role">Head of the Department</p>
+                </div>
+<br>
+<div class="member-card1">
+                            </div>
+                <div class="member-card" onclick="showMemberModal('Faculty Coordinator', 'Liaison between faculty and students, facilitating collaborations and support for projects.')">
+                    <img src="https://res.cloudinary.com/dbjb3risi/image/upload/v1757606186/shravya_mam_qky2jr.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">Mrs.Y.Vineela Sravya</h3>
+                    <p class="member-role">Faculty Coordinator</p>
+                </div>
+<br>
+
+                <div class="member-card" onclick="showMemberModal('Team Lead', 'Leads the overall vision and strategy of AIPTClub, coordinating all activities and representing the club in official capacities.')">
+                    <img src="https://res.cloudinary.com/dbjb3risi/image/upload/v1757606186/harshini_fawo62.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">V Sri Harshini</h3>
+                    <p class="member-role">Team Lead</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('PR Manager', 'Assists in leadership and manages day-to-day operations of the club.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906377/Prathima_akka_dgbyxo.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">D Sai Prathima</h3>
+                    <p class="member-role">PR Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Technical Lead', 'Oversees all technical workshops and manages AI/ML project development.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906181/Kezia_akka_rlahmz.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">R Kezia</h3>
+                    <p class="member-role">Technical Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Technical Lead','Oversees all technical workshops and manages AI/ML project development.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906044/LIKITHA_AKKA_vg9rhz.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">N Likhita</h3>
+                    <p class="member-role">Technical Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Communication Manager', 'Helps with communication between team and attendees')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906096/Leela_akka_abanxz.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">K Leela Vaishnavi</h3>
+                    <p class="member-role">Snr Communications Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Social Media Manager', 'Handles all social media presence and digital marketing strategies.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906139/Geetha_akka_xfrmvh.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">K Geetha Meghana</h3>
+                    <p class="member-role">Snr Social Media Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Technical Manager', 'Oversees all technical workshops and manages AI/ML project development.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752159067/Na_photo_zimwmi.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">P Varshitha</h3>
+                    <p class="member-role">Jnr Technical Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Technical Manager', 'Oversees all technical workshops and manages AI/ML project development.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752906235/Hema_krfpyv.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">D Hema Sree</h3>
+                    <p class="member-role">Jnr Technical Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('ommunications Manager', 'Helps with communication between team and attendees')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752857950/SWARNA_yz1ffi.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">Y Himasri Swarna</h3>
+                    <p class="member-role">Jnr Communications Manager</p>
+                </div>
+                <div class="member-card" onclick="showMemberModal('Social Media Manager', 'Handles all social media presence and digital marketing strategies.')">
+                    <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752488132/Madhura_o9c97b.jpg" class="member-photo" alt="Member Name">
+                    <h3 class="member-name">T Madhura Meenakshi</h3>
+                    <p class="member-role">Jnr Social Media Manager</p>
+                </div>
+                <!-- New Faculty Coordinator Section -->
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="events" class="section">
+    <h2 class="section-title">Events & History</h2>
+    <div class="events-container">
+
+        <!-- Hackathons -->
+        <div class="event-category">
+            <h3 class="category-title">🚀 Hackathons</h3>
+            <p>Intensive coding competitions where students build AI solutions to real-world problems within 24-48 hours.</p>
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752771332/hackhers1_mlglzf.jpg" alt="HackHers Event">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-title">HackHers</div>
+                        <div class="event-details">Conducted on 8th and 9th of March at VIEW</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image1">
+                        <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752771340/hackhers2_r4blmf.jpg" alt="Machine Learning Marathon">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-title">Featured on Newspaper</div>
+                        <div class="event-details"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guest Lectures -->
+        <div class="event-category">
+            <h3 class="category-title">🎤 Guest Lectures</h3>
+            <p>Expert talks from industry professionals and researchers sharing insights on latest AI trends and technologies.</p>
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://res.cloudinary.com/dxcwpasvu/image/upload/v1752771418/guest_tks5dq.jpg" alt="AI in Healthcare">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-title">Future of AI </div>
+                        <div class="event-details">Radhakrishna Sanka Sir - 200 attendees</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ideathons -->
+        <div class="event-category">
+            <h3 class="category-title">💡 Ideathons</h3>
+            <p>Short innovation sprints where participants brainstorm and pitch AI-based ideas to address real-world challenges.</p>
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://res.cloudinary.com/dddffrmex/image/upload/v1757507686/WhatsApp_Image_2025-08-04_at_12.00.42_PM_zh0cyr.jpg" alt="Ideathon Event">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-title">AI Genisis</div>
+                        <div class="event-details">Held on 28th July - 100+ teams participated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Cell Launch -->
+<div class="event-category">
+    <h3 class="category-title">🏁 Cell Launch</h3>
+    <p>The official launch of our AI Club cell, where the room was creatively decorated with domain-specific tools, AI hierarchy charts, and comprehensive information about artificial intelligence.</p>
+    <div class="event-grid">
+
+        <!-- Photo 1 -->
+        <div class="event-card">
+            <div class="event-image">
+                <img src="https://res.cloudinary.com/dddffrmex/image/upload/v1757507756/WhatsApp_Image_2025-08-04_at_12.09.54_PM_sgxw5r.jpg" alt="Cell Launch Photo 1">
+            </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="event-card">
+            <div class="event-image">
+                <img src="https://res.cloudinary.com/dddffrmex/image/upload/v1757507811/20250728_161038_cl1dba.jpg" alt="Cell Launch Photo 2">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</section>
+
+
+    <!-- Student Modal -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideModal('studentModal')">&times;</button>
+            <h3>Student Registration / Login</h3>
+            <div id="studentTabs">
+                <button onclick="showTab('register')" class="submit-btn" style="width: 48%; margin-right: 4%;">Register</button>
+                <button onclick="showTab('login')" class="submit-btn" style="width: 48%;">Login</button>
+            </div>
+            
+            <div id="registerForm" style="display: block; margin-top: 2rem;">
+                <form onsubmit="registerStudent(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <select id="branch" required>
+                            <option value="">Select Branch</option>
+                            <option value="CSE">Computer Science Engineering</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="EEE">Electrical & Electronics</option>
+                            <option value="MECH">Mechanical Engineering</option>
+                            <option value="CIVIL">Civil Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Study</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1st">1st Year</option>
+                            <option value="2nd">2nd Year</option>
+                            <option value="3rd">3rd Year</option>
+                            <option value="4th">4th Year</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+
+            <div id="loginForm" style="display: none; margin-top: 2rem;">
+                <form onsubmit="loginStudent(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email ID</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideModal('adminModal')">&times;</button>
+            <h3>Admin Login</h3>
+            <form onsubmit="loginAdmin(event)" style="margin-top: 2rem;">
+                <div class="form-group">
+                    <label for="adminEmail">Email ID</label>
+                    <input type="email" id="adminEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Admin Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Member Modal -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideModal('memberModal')">&times;</button>
+            <h3 id="memberName"></h3>
+            <p id="memberDescription"></p>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <h3>Admin Panel - Registered Students</h3>
+        <button class="download-btn" onclick="downloadStudentData()">Download Student Database (CSV)</button>
+        <table class="student-table" id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                    <th>Registration Date</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+            </tbody>
+        </table>
+    </div>
+
+   
+</body>
+
+</html>
